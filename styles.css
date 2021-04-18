@@ -1,0 +1,64 @@
+:root {
+  --lightblack: #338;
+  --black: black;
+  --green: #55d5ab;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#navbar {
+  background: var(--green);
+  height: 60px;
+  padding: 0 10%;
+}
+
+#navbar #logo {
+  float: left;
+  border: 1px solid var(--black);
+  padding: 0 10px;
+  margin: 10px 0;
+  font-size: 30px;
+  border-radius: 3px;
+  letter-spacing: 3px;
+}
+
+#navbar #nav {
+  float: right;
+  background: var(--green);
+}
+
+#nav ul {
+  list-style-type: none;
+}
+
+#nav ul li {
+  display: inline-block;
+  margin: 0 35px;
+  position: relative;
+}
+
+#nav ul li a {
+  text-decoration: none;
+  color: var(--lightblack);
+  font-weight: 500;
+}
+
+#nav ul li a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 0%;
+  position: absolute;
+  background: var(--black);
+  top: 38px;
+  left: 50%;
+  transition: all ease-in-out 200ms;
+}
+
+#nav ul li a:hover::before {
+  left: 0;
+  width: 100%;
+}
